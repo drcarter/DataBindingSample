@@ -15,7 +15,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.drcarter.databinding.sample.MainActivity">
+        tools:context=".ui.main.MainActivity">
 
         <TextView
             android:id="@+id/textTitle"
@@ -24,12 +24,21 @@
             android:layout_centerInParent="true" />
 
         <Button
+            android:id="@+id/buttonPresenterEx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonChangeTitle"
+            android:onClick="@{handler.onMVPPresenterUse}"
+            android:text="mvp presenter" />
+
+        <Button
             android:id="@+id/buttonChangeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:onClick="@{handler.onChangeTitleClick}"
             android:text="change title button" />
+
     </RelativeLayout>
 
 </layout>
